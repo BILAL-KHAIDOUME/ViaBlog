@@ -7,7 +7,8 @@ module.exports = {
         inika: ['Inika', 'serif'], // Add the Inika font as "inika" family
       },
       colors: {
-        customGreen: '#008768', // Custom green color
+        customGreen: '#008768',// Custom green color
+        customgray: '#FBFAFA',
       },
     },
   },
