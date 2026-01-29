@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         customGreen: '#008768',// Custom green color
         customgray: '#FBFAFA',
+        lightgreen: '#85F085'
       },
     },
   },
