@@ -566,10 +566,6 @@ video {
   position: relative;
 }
 
-.inset-0 {
-  inset: 0px;
-}
-
 .bottom-0 {
   bottom: 0px;
 }
@@ -630,8 +626,20 @@ video {
   margin-top: 100px;
 }
 
+.mt-\[10px\] {
+  margin-top: 10px;
+}
+
+.mt-\[20px\] {
+  margin-top: 20px;
+}
+
 .mt-\[250px\] {
   margin-top: 250px;
+}
+
+.mt-\[50px\] {
+  margin-top: 50px;
 }
 
 .flex {
@@ -648,6 +656,10 @@ video {
 
 .h-\[12vh\] {
   height: 12vh;
+}
+
+.h-\[15vh\] {
+  height: 15vh;
 }
 
 .h-\[20vh\] {
@@ -672,6 +684,10 @@ video {
 
 .w-\[10vh\] {
   width: 10vh;
+}
+
+.w-\[15vh\] {
+  width: 15vh;
 }
 
 .w-\[55vh\] {
@@ -716,6 +732,10 @@ video {
 
 .gap-\[20px\] {
   gap: 20px;
+}
+
+.gap-\[25px\] {
+  gap: 25px;
 }
 
 .gap-\[300px\] {
@@ -770,9 +790,23 @@ video {
   border-width: 1px;
 }
 
+.border-4 {
+  border-width: 4px;
+}
+
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
+}
+
+.border-brad {
+  --tw-border-opacity: 1;
+  border-color: rgb(212 198 198 / var(--tw-border-opacity, 1));
+}
+
+.border-lightgray {
+  --tw-border-opacity: 1;
+  border-color: rgb(217 217 217 / var(--tw-border-opacity, 1));
 }
 
 .bg-customGreen {
@@ -829,8 +863,22 @@ video {
   padding: 1rem;
 }
 
+.p-5 {
+  padding: 1.25rem;
+}
+
 .p-6 {
   padding: 1.5rem;
+}
+
+.px-\[15px\] {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.py-\[20px\] {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .pb-2 {
@@ -894,9 +942,17 @@ video {
   line-height: 1;
 }
 
+.text-\[20px\] {
+  font-size: 20px;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-\[30px\] {
+  font-size: 30px;
 }
 
 .font-bold {
@@ -908,7 +964,24 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
+.text-nums {
+  --tw-text-opacity: 1;
+  color: rgb(70 89 70 / var(--tw-text-opacity, 1));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-stroke-2 {
+  -webkit-text-stroke-width: 2px;
+}
+
+.text-stroke-1 {
+  -webkit-text-stroke-width: 1px;
+}
+
+.text-stroke-color-black {
+  -webkit-text-stroke-color: #000;
 }

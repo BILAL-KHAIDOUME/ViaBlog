@@ -3,6 +3,14 @@ module.exports = {
   content: ["./*.html"],
   theme: {
     extend: {
+      textStrokeWidth: {
+        1: '1px' ,
+        2: '2px' ,
+      },
+      textStrokeColor: {
+        black: '#000' ,
+        white: '#fff' ,
+      },
       fontFamily: {
         inika: ['Inika', 'serif'], // Add the Inika font as "inika" family
       },
@@ -11,9 +19,31 @@ module.exports = {
         customgray: '#FBFAFA',
         lightgreen: '#85F085',
         lightgray:'#D9D9D9',
+        brad:'#D4C6C6',
+        nums:'#465946',
   
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'text-stroke': (value) => ({
+            '-webkit-text-stroke-width': value,
+          }),
+        },
+        { values: theme('textStrokeWidth') }
+      )
+
+      matchUtilities(
+        {
+          'text-stroke-color': (value) => ({
+            '-webkit-text-stroke-color': value,
+          }),
+        },
+        { values: theme('textStrokeColor') }
+      )
+    },
+  ],
 }
