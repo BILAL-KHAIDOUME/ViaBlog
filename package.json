@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm exec tailwindcss -i ./input.css -o ./output.css --minify",
+    "build": "npm exec tailwindcss -- -i ./input.css -o ./output.css --minify",
     "dev": "tailwindcss -i ./input.css -o ./output.css --watch"
   },
   "repository": {
