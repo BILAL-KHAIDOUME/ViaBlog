@@ -570,6 +570,14 @@ video {
   bottom: 0px;
 }
 
+.top-4 {
+  top: 1rem;
+}
+
+.right-4 {
+  right: 1rem;
+}
+
 .m-0 {
   margin: 0px;
 }
@@ -638,16 +646,16 @@ video {
   margin-top: 250px;
 }
 
+.mt-\[30px\] {
+  margin-top: 30px;
+}
+
 .mt-\[50px\] {
   margin-top: 50px;
 }
 
-.mt-\[40px\] {
-  margin-top: 40px;
-}
-
-.mt-\[30px\] {
-  margin-top: 30px;
+.mt-\[\] {
+  margin-top: ;
 }
 
 .flex {
@@ -674,6 +682,10 @@ video {
   height: 20vh;
 }
 
+.h-\[30vh\] {
+  height: 30vh;
+}
+
 .h-\[55vh\] {
   height: 55vh;
 }
@@ -690,12 +702,24 @@ video {
   height: 100vh;
 }
 
+.h-\[50vh\] {
+  height: 50vh;
+}
+
 .w-\[10vh\] {
   width: 10vh;
 }
 
 .w-\[15vh\] {
   width: 15vh;
+}
+
+.w-\[30vh\] {
+  width: 30vh;
+}
+
+.w-\[50vh\] {
+  width: 50vh;
 }
 
 .w-\[55vh\] {
@@ -708,6 +732,14 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[5vh\] {
+  width: 5vh;
+}
+
+.max-w-md {
+  max-width: 28rem;
 }
 
 .grow {
@@ -756,6 +788,14 @@ video {
 
 .gap-\[7px\] {
   gap: 7px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
 }
 
 .rounded-\[30px\] {
@@ -842,10 +882,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[url\(\'\/images\/background1\.jpg\'\)\] {
-  background-image: url('/images/background1.jpg');
-}
-
 .bg-cover {
   background-size: cover;
 }
@@ -877,18 +913,6 @@ video {
 
 .p-6 {
   padding: 1.5rem;
-}
-
-.p-\[\] {
-  padding: ;
-}
-
-.p-\[20px\] {
-  padding: 20px;
-}
-
-.p-\[40px\] {
-  padding: 40px;
 }
 
 .px-\[15px\] {
@@ -962,6 +986,10 @@ video {
   line-height: 1;
 }
 
+.text-\[29px\] {
+  font-size: 29px;
+}
+
 .text-\[30px\] {
   font-size: 30px;
 }
@@ -969,36 +997,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-\[20px\] {
-  font-size: 20px;
-}
-
-.text-\[40px\] {
-  font-size: 40px;
-}
-
-.text-\[25px\] {
-  font-size: 25px;
-}
-
-.text-\[28px\] {
-  font-size: 28px;
-}
-
-.text-\[29px\] {
-  font-size: 29px;
 }
 
 .font-bold {
@@ -1018,10 +1016,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\] {
-  color: ;
 }
 
 .text-stroke-1 {
