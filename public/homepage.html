@@ -32,7 +32,7 @@
     
                 </div>
     
-                <div class="flex justify-between items-center gap-[20px] mb-[30px] md:flex-col">
+                <div class="flex justify-between items-center gap-[20px] mb-[30px] ">
     
                     <div>
                         <img class="w-[10vh] h-[10vh] rounded-full" src="images/josefina.jpg" alt="joe">
@@ -76,7 +76,45 @@
                         <button class="pl-4 pr-4 pt-2 pb-2 rounded-xl text-black border border-black p-4">Mountains</button>
                     </div>
                 </div>
+                <div class="px-[15px] py-[20px]">
+
+                    <button id="addbtn" class="bg-customGreen text-white font-inika font-inika px-[15px] py-[15px] rounded-[50px]">Create +</button>
+                </div>
+
+<div id="maincontainer" class=" hidden fixed inset-0 bg-gray-500 bg-opacity-70 z-10 hidden">
+
+        <div  class="bg-white p-6 rounded-2xl w-[60%] max-w-md mx-auto">
+            <div class="flex items-center justify-center">
+
+                <h1 class="font-bold font-inika text-black">Add card</h1>
+            </div>
+            <form id="cardsform" action="#" method="post" class="flex flex-col gap-[10px] relative">
+                <label for="titre" class="mx-[50px] font-bold font-inika">Titre : </label>
+                <input id="titre" type="text" name="titre" class="mx-[50px] rounded-2xl py-[5px] bg-gray-300" required>
     
+                <label for="destination" class="mx-[50px] font-bold font-inika">Destination : </label>
+                <input id="destination" type="text" name="destination" class="mx-[50px] rounded-2xl py-[5px] bg-gray-300" required>
+    
+                <label for="note" class="mx-[50px] font-bold font-inika">Note : </label>
+                <input id="note" type="text" name="note" class="mx-[50px] rounded-2xl py-[5px] bg-gray-300" required>
+    
+                <label for="category" class="mx-[50px] font-bold font-inika">Category : </label>
+                <input id="category" type="text" name="category" class="mx-[50px] rounded-2xl py-[5px] bg-gray-300" required>
+    
+                <label for="image" class="mx-[50px] font-bold font-inika">Image url : </label>
+                <input id="image" type="url" name="image" class="mx-[50px] rounded-2xl py-[5px] bg-gray-300" required>
+    
+                <div class="flex justify-center items-center gap-[30px] mb-[10px]">
+                    <button type="reset" class="px-[20px] py-[10px] bg-gray-500 rounded-2xl" id="cancelbtn">Cancel</button>
+                    <button type="submit" class="px-[20px] py-[10px] bg-green-500 rounded-2xl" >Submit</button>
+                </div>
+    </div>
+        
+        </form>
+    </div>
+
+
+
             </section>
     
             <section class="flex justify-center items-center">
@@ -121,6 +159,8 @@
                     </div>
     
                 </div>
+
+                <div id="cardContainer" class="flex flex-wrap gap-6 mt-6 justify-center"></div>
     
             </section>
     
@@ -150,6 +190,55 @@
         </footer>
     </div>
 
-    
+    <script>
+
+let addcard = document.getElementById("addbtn");
+    let maincontainer = document.getElementById("maincontainer");
+    let cancelbtn = document.getElementById("cancelbtn");
+    let cardsform = document.getElementById("cardsform");
+    let cardContainer = document.getElementById("cardContainer");
+
+
+     addcard.addEventListener("click", () => {
+        maincontainer.classList.remove("hidden");
+    });
+
+
+    cancelbtn.addEventListener("click", () => {
+        maincontainer.classList.add("hidden");
+    });
+
+
+    cardsform.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+
+        const titre = document.getElementById('titre').value;
+        const destination = document.getElementById('destination').value;
+        const note = document.getElementById('note').value;
+        const category = document.getElementById('category').value;
+        const image = document.getElementById('image').value;
+
+
+        const newCard = document.createElement('div');
+        newCard.classList.add('bg-white', 'p-4', 'rounded-lg', 'shadow-lg', 'w-[300px]', 'h-[400px]', 'flex', 'flex-col', 'items-center');
+        newCard.innerHTML = `
+            <img src="${image}" alt="${titre}" class="w-full h-40 object-cover rounded-lg mb-4">
+            <h2 class="text-xl font-bold mb-2">${titre}</h2>
+            <p class="text-gray-700">Destination: ${destination}</p>
+            <p class="text-gray-700">Note: ${note}</p>
+            <p class="text-gray-700">Category: ${category}</p>
+        `;
+
+        cardContainer.appendChild(newCard);
+
+        maincontainer.classList.add('hidden');
+
+      
+        cardsform.reset();
+    });
+
+
+    </script>
 </body>
 </html>
