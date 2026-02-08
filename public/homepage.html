@@ -221,17 +221,17 @@ let addcard = document.getElementById("addbtn");
 
 
         const newCard = document.createElement('div');
-        newCard.classList.add('bg-white', 'p-4', 'rounded-lg', 'shadow-lg', 'w-[300px]', 'h-[400px]', 'flex', 'flex-col', 'items-center');
+        newCard.classList.add('bg-white', 'mt-7', 'w-[55vh]', 'h-[55vh]', 'flex', 'flex', 'flex-col', 'rounded-[30px]');
         newCard.innerHTML = `
 
-<div class="bg-white mt-7 w-[55vh] h-[55vh] flex flex-col rounded-[30px]">
+
     
     
     
                 <div class="">
                             <a href="detailpage.html">
         
-                                <img class="w-full h-full object-cover rounded-tl-[30px] rounded-tr-[30px]" src="images/yellowriver.jpg" alt="girl walking through a river's bridge">
+                                <img class="w-full [250px] object-cover rounded-tl-[30px] rounded-tr-[30px]" src="${image}" onerror="this.src='images/yellowriver.jpg'" alt="girl walking through a river's bridge">
                             </a>
                         </div>
         
@@ -265,7 +265,7 @@ let addcard = document.getElementById("addbtn");
                                                     </div>
                             </div>
                         </div>
-    </div>
+    
         `;
 
         cardContainer.appendChild(newCard);
